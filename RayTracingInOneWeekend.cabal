@@ -1,15 +1,9 @@
 cabal-version:      2.4
-name:               RayTracingInOneWeek
+name:               RayTracingInOneWeekend
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
 synopsis: A Haskell clone of Ray Tracing In One Week.
-
--- A longer description of the package.
--- description:
-
--- A URL where users can report bugs.
--- bug-reports:
 
 -- The license under which the package is released.
 license: MIT
@@ -20,16 +14,11 @@ author: Abdul Muiz Iqbal
 -- An email address to which users can send suggestions, bug reports, and patches.
 maintainer: parkermuiz0@gmail.com
 
--- A copyright notice.
--- copyright:
--- category:
-extra-source-files: CHANGELOG.md
-
 executable RayTracingInOneWeek
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules:    Vec3.hs, Util.hs, Config.hs, Ray.hs
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
