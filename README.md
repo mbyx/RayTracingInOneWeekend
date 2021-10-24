@@ -1,5 +1,5 @@
 # RayTracingInOneWeekend
-A Haskell implementation of Ray Tracing In One Weekend
+A Haskell implementation of [Ray Tracing In One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 
 ### 🚩 Current Status
 [Rendering A (2D) Sphere](https://github.com/Abdul-Muiz-Iqbal/RayTracingInOneWeekend/blob/main/image.ppm) 
