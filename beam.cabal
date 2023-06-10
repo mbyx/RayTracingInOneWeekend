@@ -1,27 +1,27 @@
-cabal-version:      2.4
-name:               RayTracingInOneWeekend
+cabal-version:      3.6
+name:               beam
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
-synopsis: A Haskell clone of Ray Tracing In One Week.
+synopsis: A Haskell port of Ray Tracing In One Week.
 
 -- The license under which the package is released.
 license: MIT
 
 -- The package author(s).
-author: Abdul Muiz Iqbal
+author: Em Dash
 
 -- An email address to which users can send suggestions, bug reports, and patches.
-maintainer: parkermuiz0@gmail.com
+maintainer: mbyx.dev@gmail.com
 
-executable RayTracingInOneWeek
+executable beam
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    other-modules:    Vec3.hs, Util.hs, Config.hs, Ray.hs
+    other-modules:    Vec3, Util, Config, Ray
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.14.3.0
+    build-depends:    base ^>=4.16.4.0
     hs-source-dirs:   app
     default-language: Haskell2010
