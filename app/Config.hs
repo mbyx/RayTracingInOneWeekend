@@ -1,36 +1,26 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+
 module Config where
 
-import Vec3
+import Vec3D
+import Util
 
-aspectRatio :: Double
-aspectRatio = 16.0 / 9.0
+aspectRatio :: Double = 16.0 / 9.0
 
-imageWidth :: Int
-imageWidth = 400
+imageWidth :: Int = 400
+imageHeight :: Int = floor $ ((fromIntegral imageWidth) :: Double) / aspectRatio
 
-imageHeight :: Int
-imageHeight = floor $ (((fromIntegral imageWidth) :: Double) / aspectRatio)
+viewportHeight :: Double = 2.0
+viewportWidth :: Double = aspectRatio * viewportHeight
 
-viewportHeight :: Double
-viewportHeight = 2.0
+focalLength :: Double = 1.0
 
-viewportWidth :: Double
-viewportWidth = aspectRatio * viewportHeight
+originPoint :: Point = Vec3D 0.0 0.0 0.0
 
-focalLength :: Double
-focalLength = 1.0
+horizontalPoint :: Point = Vec3D viewportWidth 0.0 0.0
+verticalPoint :: Point = Vec3D 0.0 viewportHeight 0.0
 
-originPoint :: Point
-originPoint = Vec3 0.0 0.0 0.0
-
-horizontalPoint :: Point
-horizontalPoint = Vec3 viewportWidth 0.0 0.0
-
-verticalPoint :: Point
-verticalPoint = Vec3 0.0 viewportHeight 0.0
-
-lowerLeftCorner :: Point
-lowerLeftCorner = originPoint -
-    (divScalar horizontalPoint 2.0) -
-    (divScalar verticalPoint 2.0) -
-    (Vec3 0.0 0.0 focalLength)
+lowerLeftCorner :: Point = originPoint -
+    (horizontalPoint |/| 2.0) -
+    (verticalPoint |/| 2.0) -
+    (Vec3D 0.0 0.0 focalLength)
